@@ -24,14 +24,12 @@ const Header = () => {
     ];
 
     const content = navigationItems.map(({ name, path }) => (
-        <Link key={name} href={path} className='text-sm'> {name} </Link>
+        <Link key={name} href={path}><a className='text-sm'>{name}</a></Link>
     ));
 
     return (
         <div className='w-full text-gray400 max-w-1080px m-auto text-sm pt-5 flex justify-between items-center'>
-            <Link href="/">
-                <Image src={logo} height={28} alt="logo" />
-            </Link>
+            <Link href="/"><a><Image src={logo} height={28} alt="logo" /></a></Link>
             <div className='flex gap-x-8 items-center'>
                 {content}
             </div>

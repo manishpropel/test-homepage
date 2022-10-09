@@ -50,17 +50,15 @@ const Footer = () => {
             <div className='flex justify-between items-center w-full max-w-1080px m-auto'>
                 <p>DZap &copy; 2022</p>
                 <div className='flex items-center gap-x-9'>
-                    <Link href="#">Help</Link>
-                    <Link href="#">Blog</Link>
-                    <Link href="#">Terms</Link>
-                    <Link href="#">Privacy</Link>
+                    <Link href="#"><a>Help</a></Link>
+                    <Link href="#"><a>Blog</a></Link>
+                    <Link href="#"><a>Terms</a></Link>
+                    <Link href="#"><a>Privacy</a></Link>
                 </div>
                 <div className='flex items-center gap-x-5'>
                     {
                         socialItems?.map(({ socialImage }, index) => (
-                            <Link key={index} href='#' className='w-6 h-6 rounded-full bg-gray600 hover:bg-gray400 flex items-center justify-center'>
-                                <Image src={socialImage} />
-                            </Link>
+                            <Link key={index} href='#'><a className='w-6 h-6 rounded-full bg-gray600 hover:bg-gray400 flex items-center justify-center'><Image src={socialImage} /></a></Link>
                         ))
                     }
                 </div>
