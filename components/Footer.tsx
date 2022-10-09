@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
-import twitter from '../assets/icons/twitter.svg';
-import telegram from '../assets/icons/telegram.svg';
-import discord from '../assets/icons/discord.svg';
-import medium from '../assets/icons/medium.svg';
-import youtube from '../assets/icons/youtube.svg';
-import instagram from '../assets/icons/instagram.svg';
-import linkedin from '../assets/icons/linkedin.svg';
-import reddit from '../assets/icons/reddit.svg';
+import twitter from '../public/twitter.svg';
+import telegram from '../public/telegram.svg';
+import discord from '../public/discord.svg';
+import medium from '../public/medium.svg';
+import youtube from '../public/youtube.svg';
+import instagram from '../public/instagram.svg';
+import linkedin from '../public/linkedin.svg';
+import reddit from '../public/reddit.svg';
 
 const Footer = () => {
     const socialItems = [

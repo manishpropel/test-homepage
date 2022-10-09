@@ -3,19 +3,19 @@ import Head from 'next/head'
 import Image from 'next/image'
 import AppLayout from '../components/AppLayout'
 import styles from '../styles/Home.module.css'
-import arrow from '../assets/icons/right-arrow.svg';
-import sliderBg from '../assets/icons/slider-bg.svg';
-import sliderMulti from '../assets/icons/slider-multi.svg';
-import multi from '../assets/icons/multi.svg';
-import multiFrom from '../assets/icons/multi-from.svg';
-import cart from '../assets/icons/cart.svg';
-import audited from '../assets/icons/audited.svg';
-import blocksec from '../assets/icons/blocksec.svg';
-import zokyo from '../assets/icons/zokyo.svg';
+import arrow from '../public/right-arrow.svg';
+import sliderBg from '../public/slider-bg.svg';
+import sliderMulti from '../public/slider-multi.svg';
+import multi from '../public/multi.svg';
+import multiFrom from '../public/multi-from.svg';
+import cart from '../public/cart.svg';
+import audited from '../public/audited.svg';
+import blocksec from '../public/blocksec.svg';
+import zokyo from '../public/zokyo.svg';
 import { useParallax } from 'react-scroll-parallax';
 
 const Home: NextPage = () => {
-  const opacityRange:[number, number, (any)?] = [0, 1];
+  const opacityRange: [number, number, (any)?] = [0, 1];
   const parallaxOpaque = useParallax<HTMLDivElement>({
     opacity: opacityRange,
   });
