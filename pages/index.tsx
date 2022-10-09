@@ -15,7 +15,7 @@ import zokyo from '../public/zokyo.svg';
 import { useParallax } from 'react-scroll-parallax';
 
 const Home: NextPage = () => {
-  const opacityRange: [number, number, (any)?] = [0, 1];
+  const opacityRange: [number, number, (any)?] = [0, 1.2];
   const parallaxOpaque = useParallax<HTMLDivElement>({
     opacity: opacityRange,
   });
@@ -35,7 +35,8 @@ const Home: NextPage = () => {
     opacity: opacityRange,
   });
   const parallax = useParallax<HTMLDivElement>({
-    speed: 30,
+    opacity: opacityRange,
+    speed: 20,
   });
   const manish = {
     background: 'linear-gradient(180deg, rgba(255, 255, 255, 0) -135.28%, rgba(255, 255, 255, 0.04) 106.83%, rgba(255, 255, 255, 0.08) 144.75%)',

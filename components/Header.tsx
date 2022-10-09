@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../public/logo.svg';
 import Image from 'next/image'
+import Link from 'next/link';
 
 const Header = () => {
     const navigationItems = [
@@ -23,14 +24,14 @@ const Header = () => {
     ];
 
     const content = navigationItems.map(({ name, path }) => (
-        <a key={name} href={path} className='text-sm'> {name} </a>
+        <Link key={name} href={path} className='text-sm'> {name} </Link>
     ));
 
     return (
         <div className='w-full text-gray400 max-w-1080px m-auto text-sm pt-5 flex justify-between items-center'>
-            <a href="/">
+            <Link href="/">
                 <Image src={logo} height={28} alt="logo" />
-            </a>
+            </Link>
             <div className='flex gap-x-8 items-center'>
                 {content}
             </div>

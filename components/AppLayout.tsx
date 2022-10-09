@@ -12,7 +12,7 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
             <Suspense fallback={`Loading...`}>
                 <Header />
             </Suspense>
-            {children}
+            {children} 
             <Footer />
         </div>
     )
