@@ -6,6 +6,12 @@ import youtube from "../public/youtube.svg";
 import instagram from "../public/instagram.svg";
 import linkedin from "../public/linkedin.svg";
 import reddit from "../public/reddit.svg";
+import ethereum from "../public/ethereum.svg";
+import bnb from "../public/bnb.svg";
+import avalanche from "../public/avalanche.svg";
+import optimism from "../public/optimism.svg";
+import solana from "../public/solana.svg";
+import polygon from "../public/polygon.svg";
 
 export const NAVIGATION_ITEMS = [
   {
@@ -23,6 +29,34 @@ export const NAVIGATION_ITEMS = [
   {
     name: "Support",
     path: "",
+  },
+];
+export const FAST_SWAPS = "Fast swaps";
+export const SUPPORTED_CHAINS_TITLE = "Every asset, every chain";
+export const SUPPORTED_CHAINS_LIST = [
+  {
+    name: "ethereum",
+    img: ethereum,
+  },
+  {
+    name: "bnb",
+    img: bnb,
+  },
+  {
+    name: "avalanche",
+    img: avalanche,
+  },
+  {
+    name: "optimism",
+    img: optimism,
+  },
+  {
+    name: "solana",
+    img: solana,
+  },
+  {
+    name: "polygon",
+    img: polygon,
   },
 ];
 export const SOCIAL_ITEMS = [
@@ -87,6 +121,7 @@ export const GET_STARTED_STEPS = "Get started in 2 easy steps: Add tokens Swap";
 export const LAUNCH_APP = "Launch app";
 export const DEMO_APP = "view demo";
 export const OPACITY_RANGE: [number, number, any?] = [0, 1.6];
+export const OPACITY_RANGE_REVERSE: [number, number, any?] = [1, 0.4];
 export const MULTI_TO_MULTI = {
   title: "Multi-Multi Swap",
   description:

@@ -18,8 +18,8 @@ const Header = () => {
             </div>
             <button
                 type='button'
-                onClick={() => window.location.href = DZAP}
-                className='h-9 px-4 flex justify-center items-center bg-shade910 text-sm rounded-md'
+                onClick={() => window.open(DZAP,"_blank")} 
+                className='h-9 px-4 flex justify-center items-center bg-shade910 hover:bg-gray700 text-sm rounded-md'
             >
                 {LAUNCH_APP}
             </button>

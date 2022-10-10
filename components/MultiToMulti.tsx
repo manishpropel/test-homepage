@@ -1,17 +1,14 @@
 import Image from 'next/image';
-import { Parallax, useParallax } from 'react-scroll-parallax';
+import { useParallax } from 'react-scroll-parallax';
 import sliderMulti from '../public/slider-multi.svg';
 import multi from '../public/multi.svg';
-import multiFrom from '../public/multi-from.svg';
-import cart from '../public/cart.svg';
 import { MULTI_TO_MULTI, OPACITY_RANGE } from '../constants/AppConstants';
 import { useCallback } from 'react';
+import SelectTokens from './SelectTokens';
+import BatchTokens from './BatchTokens';
 
 export default function MultiToMulti() {
   const parallaxOpaque = useParallax<HTMLDivElement>({
-    opacity: OPACITY_RANGE,
-  });
-  const parallaxOpaqueFrom = useParallax<HTMLDivElement>({
     opacity: OPACITY_RANGE,
   });
   const parallax = useParallax<HTMLDivElement>({
@@ -44,33 +41,8 @@ export default function MultiToMulti() {
         </div>
       </div>
       <div style={{ gridTemplateColumns: '1fr 2fr', gridAutoRows: '1fr' }} className='mt-4 grid items-center gap-x-6'>
-        <div className='bg-gray900 rounded-2xl pt-8 pl-8 h-full'>
-          <div className='w-12 h-12 rounded-lg bg-gray700 flex justify-center items-center'>
-            <Image src={cart} height={22} width={20} alt="cart" />
-          </div>
-          <Parallax opacity={OPACITY_RANGE}>
-            <p className='mt-3 mb-2 text-gray75 font-medium'>Select Tokens</p>
-          </Parallax>
-          <Parallax opacity={OPACITY_RANGE}>
-            <p className='text-gray400 mb-16'>Select multiple tokens at once from the DEXs</p>
-          </Parallax>
-        </div>
-        <div className='bg-gray900 overflow-hidden rounded-2xl p-8 flex justify-center items-center'>
-          <div>
-            <div ref={parallaxOpaqueFrom.ref}>
-              <Image width={570} height={313} src={multiFrom} alt="multi-from" />
-            </div>
-            <div className='w-12 bg-gray700 h-12 rounded-lg mt-10   flex justify-center items-center'>
-              <Image src={cart} height={22} width={20} alt="cart" />
-            </div>
-            <Parallax opacity={OPACITY_RANGE}>
-              <p className='mt-3 mb-2 text-gray75 font-medium'>Batch Tokens</p>
-            </Parallax>
-            <Parallax opacity={OPACITY_RANGE}>
-              <p className='text-gray400'>Add token(s) you have for token(s) you want</p>
-            </Parallax>
-          </div>
-        </div>
+        <SelectTokens />
+        <BatchTokens />
       </div>
     </div>
   )
