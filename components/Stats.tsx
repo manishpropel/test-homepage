@@ -5,19 +5,19 @@ import { OPACITY_RANGE, OPACITY_RANGE_REVERSE, STATS } from '../constants/AppCon
 const Stats = () => {
   const statsContent = useCallback(() => (
     STATS.map(({ title, value }) => (
-      <div key={title} className='flex justify-center items-center gap-x-6' >
+      <div key={title} className='flex lg:justify-center justify-between w-full items-center gap-x-6' >
         <Parallax opacity={OPACITY_RANGE_REVERSE}>
-          <p className='leading-5'>{title}</p>
+          <p className='leading-5 text-sm md:text-base'>{title}</p>
         </Parallax>
         <Parallax opacity={OPACITY_RANGE}>
-          <p className='text-4xl'>{value}</p>
+          <p className='text-2xl md:text-4xl'>{value}</p>
         </Parallax>
       </div>
     ))
   ), [STATS]);
   return (
-    <div className={`w-full stats px-14 text-white flex justify-center items-center mt-60px h-86px`}>
-      <div className='flex justify-between items-center max-w-1440px w-full'>
+    <div className={`w-full stats md:px-14 text-white flex justify-center items-center mt-8 lg:mt-60px lg:h-86px`}>
+      <div className='flex gap-y-5 my-5 lg:my-0 lg:gap-y-0 flex-wrap lg:flex-nowrap justify-between items-center max-w-1440px md:w-full w-11/12 m-auto'>
         {statsContent()}
       </div>
     </div>

@@ -13,7 +13,7 @@ const FastSwaps = () => {
     }
     return (
         <div className='bg-gray900 px-10 py-7 rounded-2xl'>
-            <p style={fastSwapText} className='mb-6 font-bold text-2xl italic'> {FAST_SWAPS} </p>
+            <p style={fastSwapText} className='mb-6 font-bold text-xl md:text-2xl italic'> {FAST_SWAPS} </p>
             <div className='flex justify-center items-center w-full'>
                 <Image src={swap} alt="swap" />
             </div>

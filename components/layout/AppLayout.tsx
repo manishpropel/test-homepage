@@ -1,5 +1,4 @@
-import dynamic from 'next/dynamic';
-import React, { ReactNode, Suspense } from 'react';
+import React, { ReactNode } from 'react';
 import AppIntro from '../AppIntro';
 import DzapTrustFactor from '../DzapTrustFactor';
 import DzapWorkingModel from '../DzapWorkingModel';
@@ -7,7 +6,7 @@ import MultiToMulti from '../MultiToMulti';
 import Footer from './Footer';
 import Header from './Header';
 
-const AppLayout = ({ children }: { children: ReactNode }) => {
+const AppLayout = () => {
     const rootStyle = {
         backgroundImage: "url('/bg-waves.svg')",
         backgroundSize: "100% 948px",

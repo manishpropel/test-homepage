@@ -7,19 +7,19 @@ import { DZAP, LAUNCH_APP, NAVIGATION_ITEMS } from '../../constants/AppConstants
 const Header = () => {
     const content = useCallback(() => (
         NAVIGATION_ITEMS.map(({ name, path }) => (
-            <Link key={name} href={path}><a className='text-sm'>{name}</a></Link>
+            <Link key={name} href={path}><a target="_blank" className='text-xs md:text-sm'>{name}</a></Link>
         ))
     ), [NAVIGATION_ITEMS]);
     return (
-        <div className='w-full text-gray400 max-w-1080px m-auto text-sm pt-5 flex justify-between items-center'>
+        <div className='md:w-full w-11/12 m-auto text-gray400 max-w-1080px text-xs md:text-sm pt-5 flex justify-between items-center'>
             <Link href="/"><a><Image src={logo} alt="logo" /></a></Link>
-            <div className='flex gap-x-8 items-center'>
+            <div className='hidden md:flex gap-x-8 items-center'>
                 {content()}
             </div>
             <button
                 type='button'
-                onClick={() => window.open(DZAP,"_blank")} 
-                className='h-9 px-4 flex justify-center items-center bg-shade910 hover:bg-gray700 text-sm rounded-md'
+                onClick={() => window.open(DZAP, "_blank")}
+                className='h-9 px-4 flex justify-center items-center bg-shade910 hover:bg-gray700 text-xs md:text-sm rounded-md'
             >
                 {LAUNCH_APP}
             </button>

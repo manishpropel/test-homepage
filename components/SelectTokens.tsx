@@ -1,13 +1,27 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import { OPACITY_RANGE } from '../constants/AppConstants';
 import cart from '../public/cart.svg';
 import addTokens from '../public/add-token.svg';
+import addTokensMobile from '../public/add-token-mobile.svg';
 
 const SelectTokens = () => {
+    const [width, setWidth] = useState<number>();
+
+    const addTokenImage = useCallback(() => (
+        width && width < 768 ?
+            <Image src={addTokensMobile} alt="add-tokens" />
+            :
+            <Image src={addTokens} alt="add-tokens" />
+    ), [width]);
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            setWidth(window.innerWidth);
+        }
+    })
     return (
-        <div className='bg-gray900 overflow-hidden rounded-2xl pt-8 pl-8 h-full flex flex-col justify-between'>
+        <div className='bg-gray900 overflow-hidden rounded-2xl md:pt-8 md:pl-8 pl-4 pt-4 pr-4 md:pr-0 h-full flex flex-col items-center justify-between'>
             <div>
                 <Parallax opacity={OPACITY_RANGE}>
                     <div className='w-12 h-12 rounded-lg bg-gray700 flex justify-center items-center'>
@@ -23,7 +37,7 @@ const SelectTokens = () => {
             </div>
             <Parallax opacity={OPACITY_RANGE}>
                 <div>
-                    <Image src={addTokens} alt="add-tokens" />
+                    {addTokenImage()}
                 </div>
             </Parallax>
         </div>

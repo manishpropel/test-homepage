@@ -7,12 +7,12 @@ import cart from '../public/cart.svg';
 
 const BatchTokens = () => {
     return (
-        <div className='bg-gray900 overflow-hidden rounded-2xl p-8 flex justify-center items-center'>
+        <div className='bg-gray900 overflow-hidden rounded-2xl p-4 md:p-8 flex justify-center items-center'>
             <div>
                 <Parallax opacity={OPACITY_RANGE}>
                     <Image width={570} height={313} src={multiFrom} alt="multi-from" />
                 </Parallax>
-                <div className='w-12 bg-gray700 h-12 rounded-lg mt-10   flex justify-center items-center'>
+                <div className='w-12 bg-gray700 h-12 rounded-lg md:mt-10 mt-5 flex justify-center items-center'>
                     <Image src={cart} height={22} width={20} alt="cart" />
                 </div>
                 <Parallax opacity={OPACITY_RANGE}>

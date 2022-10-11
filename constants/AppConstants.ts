@@ -3,8 +3,6 @@ import telegram from "../public/telegram.svg";
 import discord from "../public/discord.svg";
 import medium from "../public/medium.svg";
 import youtube from "../public/youtube.svg";
-import instagram from "../public/instagram.svg";
-import linkedin from "../public/linkedin.svg";
 import reddit from "../public/reddit.svg";
 import ethereum from "../public/ethereum.svg";
 import bnb from "../public/bnb.svg";
@@ -15,20 +13,20 @@ import polygon from "../public/polygon.svg";
 
 export const NAVIGATION_ITEMS = [
   {
-    name: "Resources",
-    path: "",
+    name: "Docs",
+    path: "https://docs.dzap.io/",
   },
   {
-    name: "Documentation",
-    path: "",
+    name: "Audit reports",
+    path: "https://docs.dzap.io/protocol/audit-reports",
   },
   {
-    name: "Blog",
-    path: "",
+    name: "Feature request",
+    path: "https://features.dzap.io/feature-request",
   },
   {
-    name: "Support",
-    path: "",
+    name: "blog",
+    path: "https://mirror.xyz/0x3a28f13bA51235c895c1B080b108cDc45C9eA472",
   },
 ];
 export const FAST_SWAPS = "Fast swaps";
@@ -62,15 +60,15 @@ export const SUPPORTED_CHAINS_LIST = [
 export const SOCIAL_ITEMS = [
   {
     socialImage: twitter,
-    profileLink: "",
+    profileLink: "https://twitter.com/dzap_io",
   },
   {
     socialImage: telegram,
-    profileLink: "",
+    profileLink: "https://t.me/dzap_io",
   },
   {
     socialImage: discord,
-    profileLink: "",
+    profileLink: "https://discord.gg/aRHESJB9md",
   },
   {
     socialImage: medium,
@@ -78,19 +76,7 @@ export const SOCIAL_ITEMS = [
   },
   {
     socialImage: youtube,
-    profileLink: "",
-  },
-  {
-    socialImage: instagram,
-    profileLink: "",
-  },
-  {
-    socialImage: linkedin,
-    profileLink: "",
-  },
-  {
-    socialImage: reddit,
-    profileLink: "",
+    profileLink: "https://www.youtube.com/channel/UChwCZ6hcampuJwY-DltN99A",
   },
 ];
 export const LINK_ITEMS = [
@@ -100,15 +86,15 @@ export const LINK_ITEMS = [
   },
   {
     title: "Blog",
-    link: "#",
+    link: "https://mirror.xyz/0x3a28f13bA51235c895c1B080b108cDc45C9eA472",
   },
   {
     title: "Terms",
-    link: "#",
+    link: "https://docs.dzap.io/protocol/terms",
   },
   {
     title: "Privacy",
-    link: "#",
+    link: "https://docs.dzap.io/protocol/privacy",
   },
 ];
 export const DZAP = "https://www.dzap.io/";
