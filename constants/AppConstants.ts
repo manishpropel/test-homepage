@@ -24,7 +24,7 @@ export const NAVIGATION_ITEMS = [
     path: "https://features.dzap.io/feature-request",
   },
   {
-    name: "blog",
+    name: "Blog",
     path: "https://mirror.xyz/0x3a28f13bA51235c895c1B080b108cDc45C9eA472",
   },
 ];
