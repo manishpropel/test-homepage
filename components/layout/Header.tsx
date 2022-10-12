@@ -34,8 +34,9 @@ const Header = () => {
                     type='button'
                     className='flex md:hidden'
                     onClick={handleSideBar}
+                    aria-label="menu"
                 >
-                    <Image src={hamburger} />
+                    <Image src={hamburger} alt="hamburger" />
                 </button>
                 {showSideBar && <HeaderSideBar handleSideBar={handleSideBar} />}
             </div>
