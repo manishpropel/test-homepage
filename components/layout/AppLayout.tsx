@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
+import { statsDataType } from '../../pages';
 import AppIntro from '../AppIntro';
 import DzapTrustFactor from '../DzapTrustFactor';
 import DzapWorkingModel from '../DzapWorkingModel';
@@ -6,7 +7,7 @@ import MultiToMulti from '../MultiToMulti';
 import Footer from './Footer';
 import Header from './Header';
 
-const AppLayout = () => {
+const AppLayout = ({ data }: { data: statsDataType }) => {
     const rootStyle = {
         backgroundImage: "url('/bg-waves.svg')",
         backgroundSize: "100% 948px",
@@ -16,7 +17,7 @@ const AppLayout = () => {
     return (
         <div style={rootStyle}>
             <Header />
-            <AppIntro />
+            <AppIntro data={data} />
             <MultiToMulti />
             <DzapWorkingModel />
             <DzapTrustFactor />

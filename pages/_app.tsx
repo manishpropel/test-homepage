@@ -9,5 +9,4 @@ function MyApp({ Component, pageProps }: AppProps) {
     </ParallaxProvider>
   )
 }
-
 export default MyApp

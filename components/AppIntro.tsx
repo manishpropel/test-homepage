@@ -1,10 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
-import { DEMO_APP, DZAP, DZAP_HASHTAG, GET_STARTED_STEPS, LAUNCH_APP, MAIN_APP_DESCRIPTION, MAIN_APP_TITLE, OPACITY_RANGE, STATS } from '../constants/AppConstants';
+import { DEMO_APP, DZAP, DZAP_HASHTAG, GET_STARTED_STEPS, LAUNCH_APP, MAIN_APP_DESCRIPTION, MAIN_APP_TITLE, VIEW_DEMO_LINK } from '../constants/AppConstants';
 import arrow from '../public/right-arrow.svg';
 import Stats from './Stats';
+import { statsDataType } from '../pages';
 
-function AppIntro() {
+function AppIntro({ data }: { data: statsDataType }) {
   return (
     <div className='md:w-full w-11/12 m-auto mt-16 md:mt-36 flex flex-col justify-center items-center text-white'>
       <p className='text-white text-lg md:text-xl mb-0.5 font-bold'> {DZAP_HASHTAG} </p>
@@ -16,11 +17,11 @@ function AppIntro() {
           <p className='text-gray900 text-xs md:text-sm font-bold uppercase'>{LAUNCH_APP}</p>
           <Image src={arrow} alt="arrow" height={14} width={9} />
         </button>
-        <button type='button' className='flex md:h-60px h-12 justify-center rounded-md items-center gap-x-4 px-5 border border-green300 hover:border-green400'>
+        <button onClick={() => window.open(VIEW_DEMO_LINK, "_blank")} type='button' className='flex md:h-60px h-12 justify-center rounded-md items-center gap-x-4 px-5 border border-green300 hover:border-green400'>
           <p className='text-xs md:text-sm font-bold text-green300 hover:text-green400 uppercase'>{DEMO_APP}</p>
         </button>
       </div>
-      <Stats />
+      <Stats data={data} />
     </div>
   );
 }

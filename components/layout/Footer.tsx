@@ -5,8 +5,8 @@ import { LINK_ITEMS, SOCIAL_ITEMS } from '../../constants/AppConstants';
 
 const Footer = () => {
     const socialContent = useCallback(() => (
-        SOCIAL_ITEMS?.map(({ socialImage }, index) => (
-            <Link key={index} href='#'><a target="_blank" className='w-6 h-6 rounded-full bg-gray600 hover:bg-gray400 flex items-center justify-center'><Image src={socialImage} alt="icon" /></a></Link>
+        SOCIAL_ITEMS?.map(({ socialImage, profileLink }, index) => (
+            <Link key={index} href={profileLink}><a target="_blank" className='w-6 h-6 rounded-full bg-gray600 hover:bg-gray400 flex items-center justify-center'><Image src={socialImage} alt="icon" /></a></Link>
         ))
     ), [SOCIAL_ITEMS]);
     const linkContent = useCallback(() => (

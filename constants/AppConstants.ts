@@ -3,7 +3,6 @@ import telegram from "../public/telegram.svg";
 import discord from "../public/discord.svg";
 import medium from "../public/medium.svg";
 import youtube from "../public/youtube.svg";
-import reddit from "../public/reddit.svg";
 import ethereum from "../public/ethereum.svg";
 import bnb from "../public/bnb.svg";
 import avalanche from "../public/avalanche.svg";
@@ -29,6 +28,7 @@ export const NAVIGATION_ITEMS = [
     path: "https://mirror.xyz/0x3a28f13bA51235c895c1B080b108cDc45C9eA472",
   },
 ];
+export const API = "https://api.dzap.io/batch-swap/get/stats";
 export const FAST_SWAPS = "Fast swaps";
 export const SUPPORTED_CHAINS_TITLE = "Every asset, every chain";
 export const SUPPORTED_CHAINS_LIST = [
@@ -72,7 +72,8 @@ export const SOCIAL_ITEMS = [
   },
   {
     socialImage: medium,
-    profileLink: "",
+    profileLink:
+      "https://mirror.xyz/0x3a28f13bA51235c895c1B080b108cDc45C9eA472",
   },
   {
     socialImage: youtube,
@@ -82,7 +83,7 @@ export const SOCIAL_ITEMS = [
 export const LINK_ITEMS = [
   {
     title: "Help",
-    link: "#",
+    link: "help@dzap.io",
   },
   {
     title: "Blog",
@@ -119,22 +120,10 @@ export const MULTI_TO_MULTI = {
   ],
 };
 export const AUDITED_BY = "Audited By";
-export const STATS = [
-  {
-    title: "Gas fee saved",
-    value: "23,123,400",
-  },
-  {
-    title: "Time saved",
-    value: "23,123,400",
-  },
-  {
-    title: "Transaction Volume",
-    value: "23,123,400",
-  },
-];
 export const WORKING_MODAL = {
   title: "What we do",
   textWhite: "Multiple tokens,",
   textGradient: "single transaction & lowest fees",
 };
+export const VIEW_DEMO_LINK =
+  "https://www.youtube.com/channel/UChwCZ6hcampuJwY-DltN99A";

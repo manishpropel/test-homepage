@@ -1,14 +1,42 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import Spinner from '../components/Spinner';
+import { API } from '../constants/AppConstants';
+import { formatSecondsToDHM } from '../utils/GeneralUtils';
 
-const Home: NextPage = () => {
+export type statsDataProps = {
+  volumeProcessed: number,
+  feeSaved: number,
+  swapSaved: number,
+  timeSaved: number,
+  lastUpdated: string
+};
+export type statsDataType = {
+  title: string;
+  value: number | undefined | string;
+}[]
+
+const Home = ({ data }: { data: statsDataProps | null }) => {
   const MainComponent = dynamic(
     () => import("../components/Main"),
     { suspense: true }
   );
+
+  const STATS = [
+    {
+      title: "Gas fee saved",
+      value: data ? `$ ${data.feeSaved.toFixed(2)}` : 0,
+    },
+    {
+      title: "Time saved",
+      value: data ? formatSecondsToDHM(data.timeSaved) : 0,
+    },
+    {
+      title: "Transaction Volume",
+      value: data ? `$ ${data.volumeProcessed.toFixed(2)}` : 0,
+    },
+  ];
   return (
     <>
       <Head>
@@ -26,10 +54,22 @@ const Home: NextPage = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Suspense fallback={<Spinner />}>
-        <MainComponent />
+        <MainComponent data={STATS} />
       </Suspense>
     </>
   );
+}
+export async function getStaticProps() {
+  const result = await fetch(API);
+  const data = await result.json();
+  if (!data) {
+    return {
+      props: { data: null }
+    }
+  }
+  return {
+    props: { data }
+  }
 }
 
 export default Home
