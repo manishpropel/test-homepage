@@ -1,7 +1,7 @@
 import twitter from "../public/twitter.svg";
 import telegram from "../public/telegram.svg";
 import discord from "../public/discord.svg";
-import medium from "../public/medium.svg";
+import mirror from "../public/mirror.png";
 import youtube from "../public/youtube.svg";
 import ethereum from "../public/ethereum.svg";
 import bnb from "../public/bnb.svg";
@@ -44,6 +44,8 @@ export const SUPPORTED_CHAINS_LIST = [
     name: "avalanche",
     img: avalanche,
   },
+];
+export const SUPPORTED_CHAINS_LIST_LOWER = [
   {
     name: "optimism",
     img: optimism,
@@ -71,7 +73,7 @@ export const SOCIAL_ITEMS = [
     profileLink: "https://discord.gg/aRHESJB9md",
   },
   {
-    socialImage: medium,
+    socialImage: mirror,
     profileLink:
       "https://mirror.xyz/0x3a28f13bA51235c895c1B080b108cDc45C9eA472",
   },
@@ -83,7 +85,7 @@ export const SOCIAL_ITEMS = [
 export const LINK_ITEMS = [
   {
     title: "Help",
-    link: "help@dzap.io",
+    link: "mailto:help@dzap.io",
   },
   {
     title: "Blog",

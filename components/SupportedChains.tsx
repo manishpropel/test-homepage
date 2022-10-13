@@ -1,7 +1,8 @@
 import Image from 'next/image';
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Parallax } from 'react-scroll-parallax';
-import { OPACITY_RANGE, SUPPORTED_CHAINS_LIST, SUPPORTED_CHAINS_TITLE } from '../constants/AppConstants';
+import { OPACITY_RANGE, SUPPORTED_CHAINS_LIST, SUPPORTED_CHAINS_LIST_LOWER, SUPPORTED_CHAINS_TITLE } from '../constants/AppConstants';
+import Marquee from "react-fast-marquee";
 
 const SupportedChains = () => {
     const textStyle = {
@@ -11,9 +12,18 @@ const SupportedChains = () => {
         backgroundClip: 'text',
         textFillColor: 'transparent',
     }
-    const chainItems = useCallback(() => (
+    const chainItemsUpper = useCallback(() => (
         SUPPORTED_CHAINS_LIST?.map(({ name, img }) => (
-            <Image key={name} src={img} alt={name} height={59} />
+            <div className='pr-3' key={name}>
+                <Image src={img} alt={name} height={59} />
+            </div>
+        ))
+    ), [SUPPORTED_CHAINS_LIST]);
+    const chainItemsLower = useCallback(() => (
+        SUPPORTED_CHAINS_LIST_LOWER?.map(({ name, img }) => (
+            <div className='pr-3' key={name}>
+                <Image src={img} alt={name} height={59} />
+            </div>
         ))
     ), [SUPPORTED_CHAINS_LIST]);
     return (
@@ -22,7 +32,12 @@ const SupportedChains = () => {
                 <p style={textStyle} className='font-bold md:text-4xl text-3xl w-72 text-center'> {SUPPORTED_CHAINS_TITLE} </p>
             </Parallax>
             <div className='flex mt-10 flex-wrap gap-x-3 gap-y-6 items-center justify-center md:justify-evenly'>
-                {chainItems()}
+                <Marquee gradient={false}>
+                    {chainItemsUpper()}
+                </Marquee>
+                <Marquee gradient={false}>
+                    {chainItemsLower()}
+                </Marquee>
             </div>
         </div>
     )
